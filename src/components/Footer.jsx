@@ -5,8 +5,8 @@ function Footer() {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Il Tuo Nome</h3>
-            <p className="text-gray-300 mb-4">Sviluppatore Web appassionato di tecnologie moderne e design intuitivo.</p>
+            <h3 className="text-xl font-bold mb-4">Andrea Zito</h3>
+            <p className="text-gray-300 mb-4">Sviluppatore Web appassionato di Cinema, Videogiochi ed Anime!.</p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-white transition-colors">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -56,7 +56,7 @@ function Footer() {
                   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
                 </svg>
-                tua-email@esempio.com
+                andryzito01@gmail.com
               </p>
               <p className="text-gray-300">Italia</p>
             </div>
@@ -64,7 +64,7 @@ function Footer() {
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
-          <p className="text-gray-300">© {new Date().getFullYear()} Il Tuo Nome. Tutti i diritti riservati.</p>
+          <p className="text-gray-300">© {new Date().getFullYear()} Andrea Zito. Tutti i diritti riservati.</p>
         </div>
       </div>
     </footer>
