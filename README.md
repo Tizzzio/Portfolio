@@ -61,77 +61,48 @@ Un **portfolio one-page** elegante e moderno che presenta in modo professionale 
 
 <img src="./public/images/Screenshot 2025-12-11 143840.png" alt="Wireframe" />
 
-✅ User Story – Portfolio Front-End One Page
+✅ **User Story – Portfolio Front-End One Page**
 
 Come visitatore del sito (recruiter, cliente o persona generica)
-voglio visualizzare rapidamente tutte le informazioni principali su <TUO NOME>
+
+voglio visualizzare rapidamente tutte le informazioni principali su <TUO  NOME>
+
 in modo da capire chi è, quali sono le sue competenze, vedere i suoi progetti e avere un modo semplice per contattarlo.
 
-🎯 Acceptance Criteria (Given/When/Then)
+🎯 **Acceptance Criteria (Sistema: Given/When/Then)**
 
-1. Sezione Hero
-
-Given apro la pagina
-
-When arrivo nella sezione iniziale
-
-Then devo vedere una presentazione breve con nome, ruolo e una CTA (es. “Contattami”).
-
-2. Sezione CV / Competenze
-
-Given navigo verso la sezione CV
-
-When scorri la pagina o clicco un link di menu
-
-Then visualizzo competenze, esperienze e studi in modo chiaro.
-
-3. Sezione Progetti
-
-Given voglio vedere esempi di lavori
-
-When arrivo alla sezione Progetti
-
-Then vedo una lista di progetti con: titolo, immagine, breve descrizione e link (placeholder).
-
-4. Sezione Immagini / Gallery
-
-Given raggiungo la gallery
-
-When scorri o apro un’immagine
-
-Then visualizzo immagini ottimizzate in un layout responsivo.
-
-5. Sezione Hobby / About Me
-
-Given voglio conoscere la parte personale
-
-When arrivo alla sezione Hobby
-
-Then vedo una breve descrizione degli interessi personali (placeholder).
-
-6. Sezione Contatti
-
-Given desidero contattare <TUO NOME>
-
-When clicco sul pulsante o scorro alla sezione contatti
-
-Then devo trovare un form o link diretti (email, LinkedIn, GitHub, ecc.)
-
-7. Navigazione One Page
-
-Given la pagina è una one-page
-
-When clicco sulle voci del menu
-
-Then lo scroll deve essere fluido alle relative sezioni.
-
-8. Responsive Design
-
-Given visito il sito da mobile/tablet/desktop
-
-When carica la pagina
-
-Then il layout deve adattarsi correttamente.
+1. **_Sezione Hero_**
+   Given apro la pagina
+   When arrivo nella sezione iniziale
+   Then devo vedere una presentazione breve con nome, ruolo e una CTA (es. “Contattami”).
+2. **_Sezione CV / Competenze_**
+   Given navigo verso la sezione CV
+   When scorri la pagina o clicco un link di menu
+   Then visualizzo competenze, esperienze e studi in modo chiaro.
+3. **_Sezione Progetti_**
+   Given voglio vedere esempi di lavori
+   When arrivo alla sezione Progetti
+   Then vedo una lista di progetti con: titolo, immagine, breve descrizione e link (placeholder).
+4. **_Sezione Immagini / Gallery_**
+   Given raggiungo la gallery
+   When scorri o apro un’immagine
+   Then visualizzo immagini ottimizzate in un layout responsivo.
+5. **_Sezione Hobby / About Me_**
+   Given voglio conoscere la parte personale
+   When arrivo alla sezione Hobby
+   Then vedo una breve descrizione degli interessi personali (placeholder).
+6. **_Sezione Contatti_**
+   Given desidero contattare Andrea
+   When clicco sul pulsante o scorro alla sezione contatti
+   Then devo trovare un form o link diretti (email, LinkedIn, GitHub, ecc.)
+7. **_Navigazione One Page_**
+   Given la pagina è una one-page
+   When clicco sulle voci del menu
+   Then lo scroll deve essere fluido alle relative sezioni.
+8. **_Responsive Design_**
+   Given visito il sito da mobile/tablet/desktop
+   When carica la pagina
+   Then il layout deve adattarsi correttamente.
 
 ---
 
