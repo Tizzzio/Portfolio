@@ -1,5 +1,6 @@
 // Componenti riutilizzabili
 import React from "react";
+import Image from "next/image";
 
 // Componente per le barre delle competenze
 export const SkillBar = ({ name, level, color }) => (
@@ -44,10 +45,22 @@ export const GradientButton = ({ children, onClick, variant = "primary", classNa
 export const ProjectCard = ({ project }) => (
   <div className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-gray-200 transform hover:-translate-y-2">
     <div className={`h-48 bg-gradient-to-br ${project.color} relative overflow-hidden`}>
-      <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-10 transition-all duration-300"></div>
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="text-6xl opacity-80 group-hover:scale-110 transition-transform duration-300">{project.icon}</div>
-      </div>
+      <div className="absolute inset-0 bg-black bg-opacity-30 group-hover:bg-opacity-20 transition-all duration-300"></div>
+      {project.image ? (
+        <div className="absolute inset-0">
+          <Image
+            src={project.image}
+            alt={project.title}
+            width={400}
+            height={192}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+      ) : (
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="text-6xl opacity-80 group-hover:scale-110 transition-transform duration-300">{project.icon}</div>
+        </div>
+      )}
       <div className="absolute top-4 right-4">
         <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-full p-2">
           <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
