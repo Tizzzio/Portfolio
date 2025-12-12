@@ -5,9 +5,9 @@ export default function Home() {
       <section className="bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Ciao, sono <span className="text-blue-600">Il Tuo Nome</span>
+            Ciao, sono <span className="text-blue-600">Andrea Zito</span>
           </h1>
-          <p className="text-xl text-gray-600 mb-8">Sviluppatore Web appassionato di tecnologie moderne</p>
+          <p className="text-xl text-gray-600 mb-8">Front-End Developer</p>
           <div className="flex gap-4 justify-center">
             <a href="#progetti" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
               Vedi i miei progetti
