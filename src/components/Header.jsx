@@ -1,54 +1,17 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { useScrollSpy } from "../lib/useScrollSpy";
+import { MENU_ITEMS, CSS_CLASSES } from "../lib/constants";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("hero");
-  const [scrolled, setScrolled] = useState(false);
+  const { activeSection, scrolled, scrollToSection } = useScrollSpy();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      setScrolled(scrollPosition > 50);
-
-      // Detect active section
-      const sections = ["hero", "about", "progetti", "contatti"];
-      const currentSection = sections.find((section) => {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          return rect.top <= 100 && rect.bottom >= 100;
-        }
-        return false;
-      });
-
-      if (currentSection) {
-        setActiveSection(currentSection);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
+  const handleMenuClick = (sectionId) => {
+    scrollToSection(sectionId);
     setIsMenuOpen(false);
   };
-
-  const menuItems = [
-    { id: "hero", label: "Home", icon: "🏠" },
-    { id: "about", label: "Chi Sono", icon: "👨‍💼" },
-    { id: "progetti", label: "Progetti", icon: "💼" },
-    { id: "contatti", label: "Contatti", icon: "📞" },
-  ];
 
   return (
     <>
@@ -60,22 +23,19 @@ function Header() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
-            <Link
-              href="/"
-              className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:scale-105 transition-all duration-300"
-            >
+            <Link href="/" className={`text-2xl font-bold ${CSS_CLASSES.gradient.primaryText} hover:scale-105 transition-all duration-300`}>
               Andrea.dev!
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex space-x-1">
-              {menuItems.map((item) => (
+            <nav className="hidden md:flex space-x-8">
+              {MENU_ITEMS.map((item) => (
                 <button
                   key={item.id}
-                  onClick={() => scrollToSection(item.id)}
+                  onClick={() => handleMenuClick(item.id)}
                   className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                     activeSection === item.id
-                      ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg"
+                      ? `${CSS_CLASSES.gradient.primary} text-white shadow-lg`
                       : "text-gray-600 hover:text-blue-600 hover:bg-blue-50"
                   }`}
                 >
@@ -103,14 +63,12 @@ function Header() {
           }`}
         >
           <nav className="px-4 py-6 space-y-2">
-            {menuItems.map((item) => (
+            {MENU_ITEMS.map((item) => (
               <button
                 key={item.id}
-                onClick={() => scrollToSection(item.id)}
+                onClick={() => handleMenuClick(item.id)}
                 className={`w-full text-left px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
-                  activeSection === item.id
-                    ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white"
-                    : "text-gray-600 hover:text-blue-600 hover:bg-blue-50"
+                  activeSection === item.id ? `${CSS_CLASSES.gradient.primary} text-white` : "text-gray-600 hover:text-blue-600 hover:bg-blue-50"
                 }`}
               >
                 <span className="mr-3">{item.icon}</span>
