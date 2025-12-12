@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+/* ⭐ PERSONALIZZA: Modifica i colori del tuo brand */
 :root {
   --background: #ffffff;
   --foreground: #171717;

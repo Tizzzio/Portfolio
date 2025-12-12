@@ -6,7 +6,8 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
-    setIsVisible(true);
+    // Delay per evitare cascading renders
+    const timer = setTimeout(() => setIsVisible(true), 0);
 
     // Smooth scroll behavior
     const handleScroll = () => {
@@ -68,7 +69,7 @@ export default function Home() {
             >
               <p className="text-2xl text-gray-600 mb-4">Front-End Developer</p>
               <p className="text-lg text-gray-500 mb-8 max-w-2xl mx-auto">
-                Creo esperienze web moderne e intuitive con passione per il codice pulito e il design elegante
+                Creo esperienze web moderne e intuitive con passione per il codice pulito e il design elegante!
               </p>
             </div>
             <div
@@ -118,12 +119,12 @@ export default function Home() {
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">🚀 Le Mie Competenze</h3>
                 <div className="grid grid-cols-2 gap-3">
                   {[
-                    { name: "React", level: 90, color: "from-blue-500 to-blue-600" },
-                    { name: "Next.js", level: 85, color: "from-gray-700 to-gray-800" },
-                    { name: "JavaScript", level: 95, color: "from-yellow-500 to-yellow-600" },
-                    { name: "Tailwind CSS", level: 88, color: "from-cyan-500 to-cyan-600" },
-                    { name: "TypeScript", level: 80, color: "from-blue-600 to-blue-700" },
-                    { name: "Node.js", level: 75, color: "from-green-500 to-green-600" },
+                    { name: "React", level: 80, color: "from-blue-500 to-blue-600" },
+                    { name: "Next.js", level: 70, color: "from-gray-700 to-gray-800" },
+                    { name: "JavaScript", level: 100, color: "from-yellow-500 to-yellow-600" },
+                    { name: "Tailwind CSS", level: 80, color: "from-cyan-500 to-cyan-600" },
+                    { name: "TypeScript", level: 75, color: "from-blue-600 to-blue-700" },
+                    { name: "Node.js", level: 80, color: "from-green-500 to-green-600" },
                   ].map((skill, index) => (
                     <div key={skill.name} className="space-y-2">
                       <div className="flex justify-between text-sm">
@@ -142,32 +143,29 @@ export default function Home() {
               </div>
 
               <div className="flex flex-wrap gap-3">
-                {["🎨 UI/UX Design", "📱 Responsive Design", "⚡ Performance Optimization", "🔧 API Integration", "🚀 Modern Frameworks"].map(
-                  (tag, index) => (
-                    <span
-                      key={index}
-                      className="bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 text-blue-800 px-4 py-2 rounded-full text-sm font-medium hover:shadow-md transition-all duration-300"
-                    >
-                      {tag}
-                    </span>
-                  )
-                )}
+                {["📱 Responsive Design", "⚡ Performance Optimization", "🔧 API Integration", "🚀 Modern Frameworks"].map((tag, index) => (
+                  <span
+                    key={index}
+                    className="bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 text-blue-800 px-4 py-2 rounded-full text-sm font-medium hover:shadow-md transition-all duration-300"
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
             </div>
 
             <div className="relative">
               <div className="relative z-10 bg-gradient-to-br from-blue-400 to-purple-500 rounded-2xl p-8 text-white text-center shadow-2xl transform hover:scale-105 transition-all duration-300">
-                <div className="w-32 h-32 bg-white bg-opacity-20 rounded-full mx-auto mb-6 flex items-center justify-center backdrop-blur-sm">
-                  <svg className="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                  </svg>
+                {/* ⭐ PERSONALIZZA: Sostituisci con la tua foto del volto */}
+                <div className="w-32 h-32 bg-white bg-opacity-20 rounded-full flex items-center justify-center mb-6 overflow-hidden mx-auto">
+                  <img src="/images/profile.jpg" alt="Andrea Zito - Profile Picture" className="w-full h-full object-cover rounded-full" />
                 </div>
                 <h3 className="text-2xl font-bold mb-2">Andrea Zito</h3>
                 <p className="text-blue-100 mb-4">Frontend Developer</p>
                 <div className="space-y-2 text-sm text-blue-50">
                   <p>📍 Italia</p>
                   <p>💼 Freelancer</p>
-                  <p>🎯 Progetti Realizzati: 50+</p>
+                  <p>🎯 Progetti Realizzati: 4</p>
                 </div>
               </div>
 
@@ -203,25 +201,25 @@ export default function Home() {
           <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
             {[
               {
-                title: "E-Commerce Platform",
-                description: "Piattaforma e-commerce completa con sistema di pagamento integrato, gestione inventory e dashboard amministratore.",
-                tech: ["React", "Node.js", "Stripe", "MongoDB"],
+                title: "TizzzVerse",
+                description: "Progetto HTML/CSS VANILLA. Sito vetrina a tema videogiochi!",
+                tech: ["HTML", "CSS"],
                 color: "from-blue-500 to-cyan-500",
-                icon: "🛍️",
+                icon: "🎮",
               },
               {
-                title: "Task Management App",
-                description: "Applicazione per la gestione di progetti e task con funzionalità di collaborazione in tempo reale.",
-                tech: ["Next.js", "Socket.io", "PostgreSQL", "Tailwind"],
-                color: "from-purple-500 to-pink-500",
-                icon: "📋",
+                title: "Task Management App", // ⭐ PERSONALIZZA: Titolo del progetto
+                description: "Applicazione per la gestione di progetti e task con funzionalità di collaborazione in tempo reale.", // ⭐ PERSONALIZZA: Descrizione del progetto
+                tech: ["Next.js", "Socket.io", "PostgreSQL", "Tailwind"], // ⭐ PERSONALIZZA: Tecnologie utilizzate
+                color: "from-purple-500 to-pink-500", // ⭐ PERSONALIZZA: Colori del gradiente (opzionale)
+                icon: "📋", // ⭐ PERSONALIZZA: Emoji rappresentativa
               },
               {
-                title: "Portfolio Website",
-                description: "Portfolio personale con design moderno, animazioni fluide e ottimizzazioni per le performance.",
-                tech: ["Next.js", "Framer Motion", "Tailwind", "Vercel"],
-                color: "from-green-500 to-teal-500",
-                icon: "🎨",
+                title: "Portfolio Website", // ⭐ PERSONALIZZA: Titolo del progetto
+                description: "Portfolio personale con design moderno, animazioni fluide e ottimizzazioni per le performance.", // ⭐ PERSONALIZZA: Descrizione del progetto
+                tech: ["Next.js", "Framer Motion", "Tailwind", "Vercel"], // ⭐ PERSONALIZZA: Tecnologie utilizzate
+                color: "from-green-500 to-teal-500", // ⭐ PERSONALIZZA: Colori del gradiente (opzionale)
+                icon: "🎨", // ⭐ PERSONALIZZA: Emoji rappresentativa
               },
             ].map((project, index) => (
               <div
@@ -263,12 +261,22 @@ export default function Home() {
                   </div>
 
                   <div className="flex gap-3 pt-4">
-                    <button className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-medium hover:scale-105">
+                    <a
+                      href="https://tizzzio.github.io/TizzzVerse/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition-all duration-300 font-medium hover:scale-105 text-center"
+                    >
                       🚀 Live Demo
-                    </button>
-                    <button className="flex-1 border-2 border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-all duration-300 font-medium">
+                    </a>
+                    <a
+                      href="https://github.com/Tizzzio"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 border-2 border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:border-gray-400 hover:bg-gray-50 transition-all duration-300 font-medium text-center"
+                    >
                       💻 Codice
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -420,35 +428,14 @@ export default function Home() {
                     </svg>
                     <span className="font-medium">GitHub</span>
                   </a>
-
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/andrea-zito-34785928a/"
                     className="flex items-center justify-center space-x-3 bg-blue-100 hover:bg-blue-600 text-blue-700 hover:text-white px-6 py-4 rounded-lg transition-all duration-300 group"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z" />
                     </svg>
                     <span className="font-medium">LinkedIn</span>
-                  </a>
-
-                  <a
-                    href="#"
-                    className="flex items-center justify-center space-x-3 bg-blue-100 hover:bg-blue-400 text-blue-700 hover:text-white px-6 py-4 rounded-lg transition-all duration-300 group"
-                  >
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
-                    </svg>
-                    <span className="font-medium">Twitter</span>
-                  </a>
-
-                  <a
-                    href="#"
-                    className="flex items-center justify-center space-x-3 bg-pink-100 hover:bg-pink-500 text-pink-700 hover:text-white px-6 py-4 rounded-lg transition-all duration-300 group"
-                  >
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.042-3.441.219-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.690 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 01.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.888-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.357-.631-2.750-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.990-5.367 11.990-11.988C24.007 5.367 18.641.001.012.001z" />
-                    </svg>
-                    <span className="font-medium">Dribbble</span>
                   </a>
                 </div>
               </div>

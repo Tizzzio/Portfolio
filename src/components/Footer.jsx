@@ -29,7 +29,7 @@ function Footer() {
               <p className="text-lg text-blue-200 mb-4">Frontend Developer</p>
               <p className="text-gray-300 leading-relaxed max-w-md">
                 Sviluppatore Web appassionato con focus su esperienze utente moderne e performanti. Specializzato in React, Next.js e tecnologie
-                frontend all'avanguardia.
+                frontend all&apos;avanguardia.
               </p>
             </div>
 
@@ -117,7 +117,7 @@ function Footer() {
               </a>
 
               <a
-                href="#"
+                href="https://www.linkedin.com/in/andrea-zito-34785928a/"
                 className="flex items-center justify-center p-3 bg-blue-800 hover:bg-blue-700 rounded-lg transition-all duration-300 hover:scale-105 group"
               >
                 <svg className="w-5 h-5 text-blue-300 group-hover:text-white" fill="currentColor" viewBox="0 0 20 20">
@@ -130,7 +130,7 @@ function Footer() {
             <div className="space-y-2">
               <p className="text-sm text-gray-400 mb-3">💻 Tech Stack</p>
               <div className="flex flex-wrap gap-2">
-                {["React", "Next.js", "TypeScript", "Tailwind"].map((tech, index) => (
+                {["React", "Next.js", "TypeScript", "Tailwind CSS", "HTML", "JavaScript"].map((tech, index) => (
                   <span key={index} className="px-2 py-1 bg-gray-800 text-gray-300 rounded text-xs font-medium">
                     {tech}
                   </span>

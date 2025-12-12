@@ -21,7 +21,6 @@ export const metadata = {
   description:
     "Portfolio di Andrea Zito, Frontend Developer specializzato in React, Next.js e tecnologie moderne. Creo esperienze web performanti e intuitive.",
   keywords: "Andrea Zito, Frontend Developer, React, Next.js, JavaScript, TypeScript, Portfolio, Web Developer, Italia",
-  authors: [{ name: "Andrea Zito", url: "https://github.com/Tizzzio" }],
   creator: "Andrea Zito",
   publisher: "Andrea Zito",
   formatDetection: {
@@ -29,18 +28,18 @@ export const metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://your-portfolio-domain.com"),
+  metadataBase: new URL("https://portfolio-dun-two-60.vercel.app"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     title: "Andrea Zito | Frontend Developer Portfolio",
     description: "Portfolio di Andrea Zito, Frontend Developer specializzato in React, Next.js e tecnologie moderne.",
-    url: "https://your-portfolio-domain.com",
+    url: "https://portfolio-dun-two-60.vercel.app",
     siteName: "Andrea Zito Portfolio",
     images: [
       {
-        url: "/og-image.jpg", // Aggiungi questa immagine in public/
+        url: "/images/profile.jpg",
         width: 1200,
         height: 630,
         alt: "Andrea Zito Portfolio",
@@ -48,12 +47,6 @@ export const metadata = {
     ],
     locale: "it_IT",
     type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Andrea Zito | Frontend Developer Portfolio",
-    description: "Portfolio di Andrea Zito, Frontend Developer specializzato in React, Next.js e tecnologie moderne.",
-    images: ["/og-image.jpg"],
   },
   robots: {
     index: true,
@@ -67,7 +60,7 @@ export const metadata = {
     },
   },
   verification: {
-    google: "your-google-verification-code", // Sostituisci con il tuo codice
+    google: "Cj5t63vIe7rrsBMiSEjTP1t-bJJrlKxM3PQUz6h5Wnk",
   },
 };
 

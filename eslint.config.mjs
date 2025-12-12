@@ -11,6 +11,13 @@ const eslintConfig = defineConfig([
     "build/**",
     "next-env.d.ts",
   ]),
+  {
+    rules: {
+      // Disabilita temporaneamente queste regole per il portfolio
+      "react/no-unescaped-entities": "off",
+      "react-hooks/set-state-in-effect": "warn",
+    },
+  },
 ]);
 
 export default eslintConfig;

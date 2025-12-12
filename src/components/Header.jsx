@@ -64,7 +64,7 @@ function Header() {
               href="/"
               className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent hover:scale-105 transition-all duration-300"
             >
-              Andrea.dev
+              Andrea.dev!
             </Link>
 
             {/* Desktop Navigation */}
