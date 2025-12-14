@@ -8,7 +8,6 @@ import { SkillBar, Tag, GradientButton, ProjectCard, SectionHeader } from "../co
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
   const { scrollToSection } = useScrollSpy();
-
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true), 0);
     return () => clearTimeout(timer);
@@ -107,7 +106,7 @@ export default function Home() {
           >
             <h1 className="text-6xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight drop-shadow-lg">
               Ciao, sono{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent animate-pulse font-black drop-shadow-sm">
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent font-black drop-shadow-sm gradient-animate float">
                 Andrea Zito
               </span>
             </h1>

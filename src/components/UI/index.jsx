@@ -110,10 +110,13 @@ export const ProjectCard = ({ project }) => (
 );
 
 // Componente per le sezioni con titolo
-export const SectionHeader = ({ title, subtitle, className = "" }) => (
-  <div className={`text-center mb-16 ${className}`}>
-    <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{title}</h2>
-    <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
-    {subtitle && <p className="text-xl text-gray-600 max-w-3xl mx-auto">{subtitle}</p>}
-  </div>
-);
+export const SectionHeader = ({ title, subtitle, className = "" }) => {
+  const isWhiteTheme = className.includes("text-white");
+  return (
+    <div className={`text-center mb-16 ${className}`}>
+      <h2 className={`text-4xl md:text-5xl font-bold mb-4 ${isWhiteTheme ? "text-white" : "text-gray-900"}`}>{title}</h2>
+      <div className="w-20 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
+      {subtitle && <p className={`text-xl max-w-3xl mx-auto ${isWhiteTheme ? "text-gray-200" : "text-gray-600"}`}>{subtitle}</p>}
+    </div>
+  );
+};

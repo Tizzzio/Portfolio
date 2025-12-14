@@ -4,7 +4,7 @@ export const SECTIONS = ["hero", "about", "progetti", "contatti"];
 export const MENU_ITEMS = [
   { id: "hero", label: "Home", icon: "🏠" },
   { id: "about", label: "Chi Sono", icon: "👨‍💼" },
-  { id: "progetti", label: "Progetti", icon: "💼" },
+  { id: "progetti", label: "Progetti", icon: "🚀" },
   { id: "contatti", label: "Contatti", icon: "📞" },
 ];
 
@@ -61,6 +61,7 @@ export const PERSONAL_INFO = {
   github: "https://github.com/Tizzzio",
   linkedin: "https://www.linkedin.com/in/andrea-zito-34785928a/",
   projectsCompleted: 4,
+  githubUsername: "Tizzzio",
 };
 
 // Classi CSS comuni
